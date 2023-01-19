@@ -17,10 +17,6 @@ h1 {
 	display: flex;
 }
 
-#container {
-
-}
-
 #tasks {
 	border: solid black 1px;
 	justify-content: center;
