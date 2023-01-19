@@ -1,7 +1,8 @@
 function addItem(){
-    var Item = document.createElement("h2")
+    let Item = document.createElement("h2")
     Item.setAttribute["id", "newitem"]
-    var itemname = document.getElementById('myinput').value
-    Item.setAttribute['innerHTML', itemname]
-    document.append(Item)
+    let itemname = document.getElementById('myinput').value
+    console.log(document.getElementById('myinput').value)
+    Item.textContent = itemname
+    document.getElementById('tasks').append(Item)
 }
