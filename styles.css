@@ -1,10 +1,39 @@
 body {
-	backgroud-color: red;
+	background-color: rgba(128, 128, 128, .6);
 }
-
-h1 h2 h3 h4 h5 h6 { 
+h1 {
 	color: white;
 	text-align: center;
+}
+
+#myinput {
+	height: 1rem;
+	padding: 1rem;
+}
+
+#inputdiv {
+	justify-content: center;
+	align-items:center;
+	display: flex;
+}
+
+#container {
+
+}
+
+#tasks {
+	border: solid black 1px;
+	justify-content: center;
+	align-items:center;
+	display: flex;
+	background-color: rgba(128, 0, 0, .5);
+	margin: 1rem;
+}
+
+h2, h3, h4, h5, h6 { 
+	color: white;
+	text-align: center;
+	padding: 1rem;
 }
 
 p {
@@ -16,6 +45,7 @@ p {
 	background-color: blue;
 	color: black;
 	border-radius: .2rem;
+	padding: 1rem;
 }
 
 
