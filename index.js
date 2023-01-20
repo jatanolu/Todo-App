@@ -49,5 +49,16 @@ function addList(){
 	Button.className='inputbutton'
 	Button.textContent='Add Item'
 	Button.setAttribute('onclick', 'addItem.call(this)')
-	InputDiv.append(Button)
+    InputDiv.append(Button)
+    let delButton = document.createElement('button')
+    delButton.id = 'delItem'
+    delButton.className = 'button'
+    delButton.textContent = 'X'
+    delButton.onclick = deleteList
+	InputDiv.append(delButton)
+}
+
+function deleteList(){
+    Item = this.parentElement.parentElement
+    Item.remove()
 }
