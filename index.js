@@ -1,16 +1,16 @@
 function addItem(){
     let Div = document.createElement('div')
     Div.id = 'tasks'
-    document.getElementById('container').append(Div)
+    this.parentElement.parentElement.append(Div)
     let Item = document.createElement("h2")
+    inputV= this.parentElement.children[0].value
     Item.id = 'newitem'
-    let itemname = document.getElementById('myinput').value
-    console.log(document.getElementById('myinput').value)
-    Item.textContent = itemname
+    Item.textContent = inputV
     Div.appendChild(Item)
     let delButton = document.createElement('button')
     delButton.id = 'delItem'
     delButton.className = 'button'
+    delButton.textContent = 'X'
     Div.appendChild(delButton)
     delButton.onclick = deleter
     Div.onclick = checker
@@ -29,4 +29,25 @@ function checker(){
     else{
         Div.style.backgroundColor = 'green'
     }
+}
+
+function addList(){
+	let Div = document.createElement('div')
+	Div.id = 'container'
+	document.body.append(Div)
+	Title = document.createElement('h1')
+	Title.textContent = document.getElementById('listName').value
+	Div.append(Title)
+	let InputDiv = document.createElement('div')
+	InputDiv.id = 'inputdiv'
+	Div.append(InputDiv)
+	let Input = document.createElement('input')
+	Input.id='myinput'
+	Input.placeholder = 'Task'
+	InputDiv.append(Input)
+	let Button = document.createElement('button')
+	Button.className='inputbutton'
+	Button.textContent='Add Item'
+	Button.setAttribute('onclick', 'addItem.call(this)')
+	InputDiv.append(Button)
 }
