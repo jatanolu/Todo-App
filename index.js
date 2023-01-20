@@ -25,9 +25,11 @@ function checker(){
     Div = this
     if (Div.style.backgroundColor === 'green'){
         Div.style.backgroundColor =  'rgba(128, 0, 0, .5)'
+	Div.style.textDecoration = 'none'
     }
     else{
         Div.style.backgroundColor = 'green'
+	Div.style.textDecoration = 'line-through'
     }
 }
 
